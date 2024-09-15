@@ -1,0 +1,41 @@
+@echo off
+set gitdir=c:\portablegit
+set path=%gitdir%\cmd;%path%
+
+git init
+git remote -v <- menampilkan yang sedang digunakan
+git branch <-cek branch local
+git branch -r <- periksa branch yang ada diremote
+git checkout master <-memilih branch aktif
+git checkout -b main <- membuat branch baru dengan nama main dan otomatis pindha ke branch baru yaitu main
+git branch -d main<- menghapus branch local namun catatn harus keluar dari branch aktif
+git branch -m master main <- memindahkan barnceh master ke main dan menghapus branch master
+git push origin --delete master
+
+
+
+git remote set-url origin https://github.com/fayoverlay/fayoverlay.github.io.git
+
+git init
+git remote add origin https://github.com/mirongdev/mirongdev.github.git
+git remote set-url origin https://github.com/mirongdev/mirongdev.github.git
+
+pause
+git config user.email "mirongdev@gmail.com"
+git config user.name "mirongdev"
+git checkout master
+git add .
+git commit -m "auto commit"
+rem git push origin master
+git push -f origin master
+pause
+
+
+
+git branch -m master <BRANCH>
+git fetch origin
+git branch -u origin/<BRANCH> <BRANCH>
+git remote set-head origin -a
+
+
+git branch -u origin/master main
